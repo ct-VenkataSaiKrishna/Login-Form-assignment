@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log-in form</title>
+    <link rel="stylesheet" href="loginForm_style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+</head>
+<body>
+
+    <div id="container">
+        <div id="form-container">
+            <center><h1>Sign Up</h1></center>
+            <form id="loginForm" action="">
+                <label calss = "lable-tag" for="userName"><strong>Username:</strong></label><br>
+                <input class = "input-tag" type="text" id="userName" autocomplete="off" placeholder="Enter your username"><br><br>
+                <p id="userNameWarning">Username must be between 3 and 25 characters.</p>
+                <label calss = "lable-tag" for="emailId"><strong>Email:</strong></label><br>
+                <input class = "input-tag" type="email" id="emailId" autocomplete="off" required="" placeholder="Enter you email address"><br><br>
+                <p id="emailWarning">Enter valid email address</p>
+                <label calss = "lable-tag" for="password"><strong>Password:</strong></label><br>
+                <input class = "input-tag" type="password" id="password" autocomplete="off" placeholder="Enter your password" style = "width: 97%">
+                <span style = "display: inline-block;"><i class="far fa-eye eyeIcon" id="togglePassword" onmousedown="showPassword()" onmouseup="hidePassword()"></i></span><br><br>
+                <p id="passwordNotMatchWarning">Password must has at least 8 characters that include at least 1 lowercase character.1 uppercase character,1 number, and 1 special character in (!@#$%^&*)</p>
+                <label calss = "lable-tag" for="confirm-password"><strong>Confirm Password:</strong></label><br>
+                <input class = "input-tag" type="password" id="confirm-password" autocomplete="off" placeholder="Re-enter your password"><br>
+                <p id="confirmedPasswordWarning">Please enter the password again</p>
+                <input class ="signup-btn" type="button" value = "SIGN UP" onclick="validateform()"><br>
+            </form>
+        </div>
+    </div>
+    <script src="loginForm.js">
+        
+    </script>
+</body>
+</html>
